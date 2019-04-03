@@ -69,11 +69,11 @@ canvas{
   grid-gap: 8px;
   /* grid-template-columns: repeat(12, 1fr); */
   grid-template-columns: repeat(autofit, minmax(100px, 1fr) );
-  grid-template-rows: 50px 500px 200px;
-  grid-template-areas:
-      ". . . h h h h h h h . ."
+  grid-template-rows: 40px 40px 40px;
+  /* grid-template-areas:
+      "h h h h h h h h h h . ."
       "m c c c c c c c c c c c"
-      "m c c c c c c c c c c c";
+      "m c c c c c c c c c c c"; */
 
 }
 .header{
@@ -84,6 +84,8 @@ canvas{
 .contents{
   background-color: red;
   grid-area: c;
+  grid-column-start: 3;
+  grid-column-end: -1
   display: grid;
   /* grid-template-columns: 1fr; */
   grid-template-areas:
@@ -107,6 +109,8 @@ canvas{
   /* grid-column: 1 / -1; */
   /* grid-row: 1/-1; */
   grid-area: m;
+  grid-column-start: 1;
+  grid-column-end: 2
   display: grid;
 
   grid-template-columns: auto;
