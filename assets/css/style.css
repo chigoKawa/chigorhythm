@@ -1,16 +1,28 @@
 body{
 
+
   margin: 0;
-  padding: 0;
-  height: 100vh;
+  /* padding: 0; */
+  /* height: 100%; */
+  /* width: 100%; */
+  background: #310F5C;
+}
+canvas{
+  display: block;
+  vertical-align: bottom;
 }
 
-#particles-js{
 
+.particles-js{
+
+
+}
+
+#particle-container{
+  position: absolute;
   width: 100%;
-  /* height: 100%; */
-  /* background: #00004C; */
-  background: #310F5C;
+  height: 100%;
+
 
 }
 
@@ -45,4 +57,158 @@ body{
 
 .container{
   padding: 20px 20px;
+}
+
+
+.house{
+
+  height: 100%;
+  margin: 10px;
+  padding: 0px 20px;
+  display: grid;
+  grid-gap: 8px;
+  /* grid-template-columns: repeat(12, 1fr); */
+  grid-template-columns: repeat(autofit, minmax(100px, 1fr) );
+  grid-template-rows: 50px 500px 200px;
+  grid-template-areas:
+      ". . . h h h h h h h . ."
+      "m c c c c c c c c c c c"
+      "m c c c c c c c c c c c";
+
+}
+.header{
+  background-color: blue;
+  grid-area: h;
+
+}
+.contents{
+  background-color: red;
+  grid-area: c;
+  display: grid;
+  /* grid-template-columns: 1fr; */
+  grid-template-areas:
+      ". . . . . . . . . . . ."
+      "c c c c c c c c c c c c"
+      "c c c c c c c c c c c c";
+  grid-template-rows: 100px;
+
+}
+
+.contents button{
+  position: absolute;
+
+
+}
+
+.menu{
+
+  /* margin: 10px; */
+  background-color: #ffa753;
+  /* grid-column: 1 / -1; */
+  /* grid-row: 1/-1; */
+  grid-area: m;
+  display: grid;
+
+  grid-template-columns: auto;
+  grid-template-areas:
+      ". . . . . . . . . . . ."
+      "l l l l l l l l l l l l"
+      "l l l l l l l l l l l l";
+  grid-template-rows: 100px;
+
+
+}
+/* children of menu */
+.button-container{
+  grid-area: f;
+
+  margin: 20px;
+  height: 80%;
+
+  background-color: brown;
+
+}
+
+
+
+.main-screen{
+
+  /* position: absolute; */
+  grid-area: c;
+
+  margin: 30px;
+  height: 70%;
+
+  /* padding: 30px 30px; */
+  background-color: brown;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100%;
+  grid-gap: 3px;
+}
+
+/* chilfren of main-screen */
+
+.info-box {
+  background-color: green;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  margin: 10px;
+
+  /* height: 70%; */
+
+  white-space : normal;
+
+}
+
+.text_container{
+  display: inline;
+
+}
+
+.avatar {
+  grid-column-start: 6;
+  grid-column-end: -1;
+  margin: 10px;
+  /* background-color: black; */
+  /* height: 80%; */
+
+  float: left;
+  max-height: 100%;
+  /* width: 50%; */
+  /* height: 300px; */
+  /* border: 1px solid black; */
+
+
+
+}
+
+.avatar img{
+
+
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+
+.info_text{
+  /* display: block; */
+
+
+  /* margin-bottom: -.65vw; */
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #222526;
+
+  display: inline-block;
+  margin-left:1px;
+  background-color: red;
+
+
+
 }

@@ -11,7 +11,8 @@ particlesJS.load('particles-js', 'particles.json', function() {
 
 /* Otherwise just put the config content (json): */
 
-particlesJS('particles-js',
+// particlesJS('particles-js',
+particlesJS('particle-container',
 
 {
   "particles": {
@@ -90,7 +91,7 @@ particlesJS('particles-js',
         "mode": "bubble"
       },
       "onclick": {
-        "enable": true,
+        "enable": false,
         "mode": "push"
       },
       "resize": true
